@@ -621,3 +621,5 @@
     <td>Probar que se creó un mensajero en la base de datos, en la tabla "Repartidores".</td>
     <td>APROBADO</td>
   </tr>
+      
+</table>

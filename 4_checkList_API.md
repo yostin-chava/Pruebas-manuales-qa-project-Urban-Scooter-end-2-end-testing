@@ -863,6 +863,64 @@
     <td>APROBADO</td>
   </tr>
 
+  <!-- ------------------- -->
+  <!-- Eliminar repartidor -->
+  <!-- ------------------- -->
+  <tr>
+    <td colspan="5"></td>
+  </tr>
+  
+  <!-- Numero 1 -->
+  <tr>
+    <td rowspan="5">Eliminar un repartidor o repartidora con id de mensajero existente.<br>endpoint: DELETE /api/v1/courier/:id</td>
+    <td colspan="3">Probar eliminar mensajero.</td>
+    <td rowspan="5"></td>
+  </tr>
+  <tr>
+    <td colspan="3">Introducir el id de un mensajero registrado.</td>
+  </tr>
+  <tr>
+    <td>Código respuesta de la API: 200 OK</td>
+    <td>APROBADO</td>
+    <td rowspan="3"></td>
+  </tr>
+  <tr>
+    <td>Cuerpo de la respuesta:<br>
+     {<br>
+          "ok": true<br>
+     }<br></td>
+    <td>APROBADO</td>
+  </tr>
+  <tr>
+    <td>Probar que al eliminar el mensajero, los pedidos vinculados en la tabla "Orders (Pedidos)" deben borrarse.</td>
+    <td>APROBADO</td>
+  </tr>
+  <!-- Numero 2 -->
+  <tr>
+    <td rowspan="5">Eliminar un repartidor o repartidora con id inexistente.<br>endpoint: DELETE /api/v1/courier/:id</td>
+    <td colspan="3">Probar eliminar mensajero.</td>
+    <td rowspan="5"></td>
+  </tr>
+  <tr>
+    <td colspan="3">No introducir el id en la solicitud.</td>
+  </tr>
+  <tr>
+    <td>Código respuesta de la API: 200 OK</td>
+    <td>APROBADO</td>
+    <td rowspan="3"></td>
+  </tr>
+  <tr>
+    <td>Cuerpo de la respuesta:<br>
+     {<br>
+          "ok": true<br>
+     }<br></td>
+    <td>APROBADO</td>
+  </tr>
+  <tr>
+    <td>Probar que al eliminar el mensajero, los pedidos vinculados en la tabla "Orders (Pedidos)" deben borrarse.</td>
+    <td>APROBADO</td>
+  </tr>
+
   
   
   

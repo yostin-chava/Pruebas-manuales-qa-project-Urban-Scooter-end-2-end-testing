@@ -474,7 +474,7 @@
   <!-- Numero 7 -->
   <tr>
     <td rowspan="5">Crear un repartidor o repartidora con 11 caracteres latino en el campo firstName: "abcdefghijk"<br>endpoint: POST /api/v1/courier</td>
-    <<td colspan="3">Probar la entrada de datos en el campo "firstName".</td>
+    <td colspan="3">Probar la entrada de datos en el campo "firstName".</td>
     <td rowspan="5"></td>
   </tr>
   <tr>
@@ -574,7 +574,7 @@
   <!-- Numero 11 -->
   <tr>
     <td rowspan="5">Crear un repartidor o repartidora con caracteres especiales en el campo firstName: "@#*-"<br>endpoint: POST /api/v1/courier</td>
-    <<td colspan="3">Probar la entrada de datos en el campo "firstName".</td>
+    <td colspan="3">Probar la entrada de datos en el campo "firstName".</td>
     <td rowspan="5"></td>
   </tr>
   <tr>
@@ -599,11 +599,11 @@
   <!-- Numero 12 -->
   <tr>
     <td rowspan="5">Crear un repartidor o repartidora con un firstName ya registrado.<br>endpoint: POST /api/v1/courierPOST</td>
-    <<td colspan="3">Probar la entrada de datos en el campo "firstName".</td>
+    <td colspan="3">Probar la entrada de datos en el campo "firstName".</td>
     <td rowspan="5"></td>
   </tr>
   <tr>
-    <td colspan="3">Introducir un nombre ya registrado en el firstName y enviar una solicitud con login y contraseña valida.</td>
+    <td colspan="3">Introducir un nombre ya registrado en el firstName y enviar una solicitud con login y contraseña válida.</td>
   </tr>
   <tr>
     <td>Código respuesta de la API: 201 Created</td>
@@ -621,5 +621,256 @@
     <td>Probar que se creó un mensajero en la base de datos, en la tabla "Repartidores".</td>
     <td>APROBADO</td>
   </tr>
+  
+  <!-- -------- -->
+  <!-- password -->
+  <!-- -------- -->
+  <tr>
+    <td colspan="5"></td>
+  </tr>
+  
+  <!-- Numero 1 -->
+  <tr>
+    <td rowspan="5">Crear un repartidor o repartidora con 4 numeros enteros en el campo password: "1234"<br>endpoint: POST /api/v1/courier</td>
+    <td colspan="3">Probar la entrada de datos en el campo "password".</td>
+    <td rowspan="5"></td>
+  </tr>
+  <tr>
+    <td colspan="3">Introducir 4 números enteros en el campo password y enviar una solicitud con un login y firstName válidos.</td>
+  </tr>
+  <tr>
+    <td>Código respuesta de la API: 201 Created</td>
+    <td>APROBADO</td>
+    <td rowspan="3"></td>
+  </tr>
+  <tr>
+    <td>Cuerpo de la respuesta:<br>
+     {<br>
+           "ok": true<br>
+     }<br></td>
+    <td>APROBADO</td>
+  </tr>
+  <tr>
+    <td>Probar que se creó un mensajero en la base de datos, en la tabla "Repartidores".</td>
+    <td>APROBADO</td>
+  </tr>
+  <!-- Numero 2 -->
+  <tr>
+    <td rowspan="5">Crear un repartidor o repartidora con 3 numeros enteros en el campo password: "123"<br>endpoint: POST /api/v1/courier</td>
+    <td colspan="3">Probar la entrada de datos en el campo "password".</td>
+    <td rowspan="5"></td>
+  </tr>
+  <tr>
+    <td colspan="3">Introducir 3 números enteros en el campo password y enviar una solicitud con un login y firstName válidos.</td>
+  </tr>
+  <tr>
+    <td>Código respuesta de la API: 400 Bad Request</td>
+    <td>NO APROBADO</td>
+    <td rowspan="3"><a href="https://yostinch.atlassian.net/browse/IEPF-25?atlOrigin=eyJpIjoiODU1YWNiMTJlZmE4NGZlMTlhZmY0MWUzMTU3N2U2ZWEiLCJwIjoiaiJ9" target="_blank">Link a Jira</a></td>
+  </tr>
+  <tr>
+    <td>Cuerpo de la respuesta:<br>
+     {<br>
+           "message": "No hay suficientes datos para crear una cuenta"<br>
+     }<br></td>
+    <td>NO APROBADO</td>
+  </tr>
+  <tr>
+    <td>Probar que no se creó un mensajero en la base de datos, en la tabla "Repartidores".</td>
+    <td>NO APROBADO</td>
+  </tr>
+  <!-- Numero 3 -->
+  <tr>
+    <td rowspan="5">Crear un repartidor o repartidora con 5 numeros enteros en el campo password: "12345"<br>endpoint: POST /api/v1/courier</td>
+    <td colspan="3">Probar la entrada de datos en el campo "password".</td>
+    <td rowspan="5"></td>
+  </tr>
+  <tr>
+    <td colspan="3">Introducir 5 números enteros en el campo password y enviar una solicitud con un login y firstName válidos.</td>
+  </tr>
+  <tr>
+    <td>Código respuesta de la API: 400 Bad Request</td>
+    <td>NO APROBADO</td>
+    <td rowspan="3"><a href="https://yostinch.atlassian.net/browse/IEPF-26?atlOrigin=eyJpIjoiNzgzYmE4Y2ViYzUxNGJmNThkNjE5NzU3ZGJkMjlhMjIiLCJwIjoiaiJ9" target="_blank">Link a Jira</a></td>
+  </tr>
+  <tr>
+    <td>Cuerpo de la respuesta:<br>
+     {<br>
+           "message": "No hay suficientes datos para crear una cuenta"<br>
+     }<br></td>
+    <td>NO APROBADO</td>
+  </tr>
+  <tr>
+    <td>Probar que no se creó un mensajero en la base de datos, en la tabla "Repartidores".</td>
+    <td>NO APROBADO</td>
+  </tr>
+  <!-- Numero 4 -->
+  <tr>
+    <td rowspan="5">Crear un repartidor o repartidora con caracteres latinos en el campo password: "Hola"<br>endpoint: POST /api/v1/courier</td>
+    <td colspan="3">Probar la entrada de datos en el campo "password".</td>
+    <td rowspan="5"></td>
+  </tr>
+  <tr>
+    <td colspan="3">Introducir letras latinas en el campo password y enviar una solicitud con un login y firstName válidos.</td>
+  </tr>
+  <tr>
+    <td>Código respuesta de la API: 400 Bad Request</td>
+    <td>NO APROBADO</td>
+    <td rowspan="3"><a href="https://yostinch.atlassian.net/browse/IEPF-27?atlOrigin=eyJpIjoiYzRiODE0MjUzNGQwNGU4YThkZDMxMDU0OTJlNDAyNDAiLCJwIjoiaiJ9" target="_blank">Link a Jira</a></td>
+  </tr>
+  <tr>
+    <td>Cuerpo de la respuesta:<br>
+     {<br>
+           "message": "No hay suficientes datos para crear una cuenta"<br>
+     }<br></td>
+    <td>NO APROBADO</td>
+  </tr>
+  <tr>
+    <td>Probar que no se creó un mensajero en la base de datos, en la tabla "Repartidores".</td>
+    <td>NO APROBADO</td>
+  </tr>
+  <!-- Numero 5 -->
+  <tr>
+    <td rowspan="5">Crear un repartidor o repartidora con caracteres chinos en el campo password: "你好"<br>endpoint: POST /api/v1/courier</td>
+    <td colspan="3">Probar la entrada de datos en el campo "password".</td>
+    <td rowspan="5"></td>
+  </tr>
+  <tr>
+    <td colspan="3">Introducir letras chinas en el campo password y enviar una solicitud con un login y firstName válidos.</td>
+  </tr>
+  <tr>
+    <td>Código respuesta de la API: 400 Bad Request</td>
+    <td>NO APROBADO</td>
+    <td rowspan="3"><a href="https://yostinch.atlassian.net/browse/IEPF-28?atlOrigin=eyJpIjoiOTc2MDE3NTFlNTliNGI3NmIwOTMzN2ZmNzRmOTNhYjIiLCJwIjoiaiJ9" target="_blank">Link a Jira</a></td>
+  </tr>
+  <tr>
+    <td>Cuerpo de la respuesta:<br>
+     {<br>
+           "message": "No hay suficientes datos para crear una cuenta"<br>
+     }<br></td>
+    <td>NO APROBADO</td>
+  </tr>
+  <tr>
+    <td>Probar que no se creó un mensajero en la base de datos, en la tabla "Repartidores".</td>
+    <td>NO APROBADO</td>
+  </tr>
+  <!-- Numero 6 -->
+  <tr>
+    <td rowspan="5">Crear un repartidor o repartidora con caracteres especiales en el campo password: "@#*-"<br>endpoint: POST /api/v1/courier</td>
+    <td colspan="3">Probar la entrada de datos en el campo "password".</td>
+    <td rowspan="5"></td>
+  </tr>
+  <tr>
+    <td colspan="3">Introducir caracteres especiales en el campo password y enviar una solicitud con un login y firstName válidos.</td>
+  </tr>
+  <tr>
+    <td>Código respuesta de la API: 400 Bad Request</td>
+    <td>NO APROBADO</td>
+    <td rowspan="3"><a href="https://yostinch.atlassian.net/browse/IEPF-29?atlOrigin=eyJpIjoiZWJlNTRhNWE2MjNlNGRmMjg1YWY1YTdiZjljZmY5ZjAiLCJwIjoiaiJ9" target="_blank">Link a Jira</a></td>
+  </tr>
+  <tr>
+    <td>Cuerpo de la respuesta:<br>
+     {<br>
+           "message": "No hay suficientes datos para crear una cuenta"<br>
+     }<br></td>
+    <td>NO APROBADO</td>
+  </tr>
+  <tr>
+    <td>Probar que no se creó un mensajero en la base de datos, en la tabla "Repartidores".</td>
+    <td>NO APROBADO</td>
+  </tr>
+
+  <!-- -------------- -->
+  <!-- Iniciar sesion -->
+  <!-- -------------- -->
+  <tr>
+    <td colspan="5"></td>
+  </tr>
+  
+  <!-- Numero 1 -->
+  <tr>
+    <td rowspan="5">Iniciar sesion con un repartidor o repartidora valido.<br>endpoint: POST /api/v1/courier/login</td>
+    <td colspan="3">Probar el inicio de sesión.</td>
+    <td rowspan="5"></td>
+  </tr>
+  <tr>
+    <td colspan="3">Introducir un login y password de un mensajero válidos.</td>
+  </tr>
+  <tr>
+    <td>Código respuesta de la API: 200 OK</td>
+    <td>APROBADO</td>
+    <td rowspan="3"></td>
+  </tr>
+  <tr>
+    <td>Cuerpo de la respuesta:<br>
+     {<br>
+           id: 12345<br>
+     }<br></td>
+    <td>APROBADO</td>
+  </tr>
+  <tr>
+    <td>Probar que se creó un registro en la base de datos, en la tabla "Repartidores".</td>
+    <td>APROBADO</td>
+  </tr>
+  <!-- Numero 2 -->
+  <tr>
+    <td rowspan="5">Iniciar sesion con un repartidor o repartidora sin login ni contraseña.<br>endpoint: POST /api/v1/courier/login</td>
+    <td colspan="3">Probar el inicio de sesión.</td>
+    <td rowspan="5"></td>
+  </tr>
+  <tr>
+    <td colspan="3">No introducir login ni password al iniciar sesión.</td>
+  </tr>
+  <tr>
+    <td>Código respuesta de la API: 400 Bad Request</td>
+    <td>APROBADO</td>
+    <td rowspan="3"></td>
+  </tr>
+  <tr>
+    <td>Cuerpo de la respuesta:<br>
+     {<br>
+           "message": "No hay datos suficientes para iniciar sesión"<br>
+     }<br></td>
+    <td>APROBADO</td>
+  </tr>
+  <tr>
+    <td>Probar que no se creó un registro en la base de datos, en la tabla "Repartidores".</td>
+    <td>APROBADO</td>
+  </tr>
+  <!-- Numero 3 -->
+  <tr>
+    <td rowspan="5">Iniciar sesion con un repartidor o repartidora con login y contraseña inexistente.<br>endpoint: POST /api/v1/courier/login</td>
+    <td colspan="3">Probar el inicio de sesión.</td>
+    <td rowspan="5"></td>
+  </tr>
+  <tr>
+    <td colspan="3">Introducir login y contraseña inexistente.</td>
+  </tr>
+  <tr>
+    <td>Código respuesta de la API: 404 Not found</td>
+    <td>APROBADO</td>
+    <td rowspan="3"></td>
+  </tr>
+  <tr>
+    <td>Cuerpo de la respuesta:<br>
+     {<br>
+           "message": "Account not found"<br>
+     }<br></td>
+    <td>APROBADO</td>
+  </tr>
+  <tr>
+    <td>Probar que no se creó un registro en la base de datos, en la tabla "Repartidores".</td>
+    <td>APROBADO</td>
+  </tr>
+
+  
+  
+  
+ 
+ 
+  
+
+     
+
       
 </table>

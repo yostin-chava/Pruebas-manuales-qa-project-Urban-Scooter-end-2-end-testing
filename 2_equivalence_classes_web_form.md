@@ -790,7 +790,7 @@
     <td>NO APROBADO</td>
     <td><a href="https://yostinch.atlassian.net/browse/IEPF-14?atlOrigin=eyJpIjoiMDY4MGIzZDA1YWViNDgzMzljNTgwODEzNjU1ZGNkMzEiLCJwIjoiaiJ9" target="_blank">Link a Jira</a></td>
   </tr>
-
+</table>
 
 
 

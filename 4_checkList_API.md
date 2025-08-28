@@ -897,7 +897,7 @@
   </tr>
   <!-- Numero 2 -->
   <tr>
-    <td rowspan="5">Eliminar un repartidor o repartidora con id inexistente.<br>endpoint: DELETE /api/v1/courier/:id</td>
+    <td rowspan="5">Eliminar un repartidor o repartidora sin id en la solicitud.<br>endpoint: DELETE /api/v1/courier/:id</td>
     <td colspan="3">Probar eliminar mensajero.</td>
     <td rowspan="5"></td>
   </tr>
@@ -905,19 +905,44 @@
     <td colspan="3">No introducir el id en la solicitud.</td>
   </tr>
   <tr>
-    <td>Código respuesta de la API: 200 OK</td>
+    <td>Código respuesta de la API: 400 Bad Request</td>
     <td>APROBADO</td>
     <td rowspan="3"></td>
   </tr>
   <tr>
     <td>Cuerpo de la respuesta:<br>
      {<br>
-          "ok": true<br>
+          "message": "No hay un mensajero con esta ID"<br>
      }<br></td>
     <td>APROBADO</td>
   </tr>
   <tr>
-    <td>Probar que al eliminar el mensajero, los pedidos vinculados en la tabla "Orders (Pedidos)" deben borrarse.</td>
+    <td>Probar que la tabla Orders (Pedidos) se mantiene igual y no hubo ningún cambio.</td>
+    <td>APROBADO</td>
+  </tr>
+  <!-- Numero 3 -->
+  <tr>
+    <td rowspan="5">Eliminar un repartidor o repartidora con id inexistente.<br>endpoint: DELETE /api/v1/courier/:id</td>
+    <td colspan="3">Probar eliminar mensajero.</td>
+    <td rowspan="5"></td>
+  </tr>
+  <tr>
+    <td colspan="3">Introducir un id inexistente de un mensajero.</td>
+  </tr>
+  <tr>
+    <td>Código respuesta de la API: 400 Bad Request</td>
+    <td>NO APROBADO</td>
+    <td rowspan="3"><a href="https://yostinch.atlassian.net/browse/IEPF-30?atlOrigin=eyJpIjoiNGZjYWY2MGQxYmM1NDRjNzhmOTYzMWMwMWJjODZjMTYiLCJwIjoiaiJ9" target="_blank">Link a Jira</a></td>
+  </tr>
+  <tr>
+    <td>Cuerpo de la respuesta:<br>
+     {<br>
+           "message": "No hay datos suficientes para eliminar el mensajero"<br>
+     }<br></td>
+    <td>NO APROBADO</td>
+  </tr>
+  <tr>
+    <td>Probar que la tabla Orders (Pedidos) se mantiene igual y no hubo ningún cambio.</td>
     <td>APROBADO</td>
   </tr>
 

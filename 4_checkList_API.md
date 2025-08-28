@@ -897,12 +897,12 @@
   </tr>
   <!-- Numero 2 -->
   <tr>
-    <td rowspan="5">Eliminar un repartidor o repartidora sin id en la solicitud.<br>endpoint: DELETE /api/v1/courier/:id</td>
+    <td rowspan="5">Eliminar un repartidor o repartidora con id inexistente.<br>endpoint: DELETE /api/v1/courier/:id</td>
     <td colspan="3">Probar eliminar mensajero.</td>
     <td rowspan="5"></td>
   </tr>
   <tr>
-    <td colspan="3">No introducir el id en la solicitud.</td>
+    <td colspan="3">Introducir un id inexistente de un mensajero.</td>
   </tr>
   <tr>
     <td>Código respuesta de la API: 400 Bad Request</td>
@@ -922,12 +922,12 @@
   </tr>
   <!-- Numero 3 -->
   <tr>
-    <td rowspan="5">Eliminar un repartidor o repartidora con id inexistente.<br>endpoint: DELETE /api/v1/courier/:id</td>
+    <td rowspan="5">Eliminar un repartidor o repartidora sin id en la solicitud.<br>endpoint: DELETE /api/v1/courier/:id</td>
     <td colspan="3">Probar eliminar mensajero.</td>
     <td rowspan="5"></td>
   </tr>
   <tr>
-    <td colspan="3">Introducir un id inexistente de un mensajero.</td>
+    <td colspan="3">No introducir el id en la solicitud.</td>
   </tr>
   <tr>
     <td>Código respuesta de la API: 400 Bad Request</td>
@@ -937,7 +937,7 @@
   <tr>
     <td>Cuerpo de la respuesta:<br>
      {<br>
-           "message": "No hay datos suficientes para eliminar el mensajero"<br>
+        "message": "No hay datos suficientes para eliminar el mensajero"<br>   
      }<br></td>
     <td>NO APROBADO</td>
   </tr>

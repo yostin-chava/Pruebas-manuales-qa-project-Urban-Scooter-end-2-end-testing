@@ -10,7 +10,6 @@
     <th>Explicación</th>
     <th>Estado</th>
     <th>Enlace al informe de errores</th>
-    <th>Comentario</th>
   </tr>
   <!-- Nombre -->
   <!--  -->

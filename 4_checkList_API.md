@@ -946,14 +946,106 @@
     <td>APROBADO</td>
   </tr>
 
+   <!-- --------------------- -->
+  <!-- Recuperar datos pedido -->
+  <!-- ---------------------- -->
+  <tr>
+    <td colspan="5"></td>
+  </tr>
   
-  
-  
- 
- 
-  
-
-     
-
-      
+  <!-- Numero 1 -->
+  <tr>
+    <td rowspan="5">Obtener los datos de un pedido con un track válido.<br>endpoint: GET /api/v1/orders/track</td>
+    <td colspan="3">Recuperar los datos de un pedido por medio de su track.</td>
+    <td rowspan="5"></td>
+  </tr>
+  <tr>
+    <td colspan="3">Introducir un track existente de pedido.</td>
+  </tr>
+  <tr>
+    <td>Código respuesta de la API: 200 OK</td>
+    <td>APROBADO</td>
+    <td rowspan="3"><a href="https://yostinch.atlassian.net/browse/IEPF-31?atlOrigin=eyJpIjoiOTdhMjU4ODM1NTg2NDRlNzg5MjBkM2Y1MTM3NWVhYjIiLCJwIjoiaiJ9" target="_blank">Link a Jira</a></td>
+  </tr>
+  <tr>
+    <td>Cuerpo de la respuesta:<br>
+     {<br>
+         "order": {<br>
+             "id": 2,<br>
+             "firstName": "Naruto",<br>
+             "lastName": "Uzumaki",<br>
+             "address": "Kanoha, 142 apt.",<br>
+             "metroStation": "1",<br>
+             "phone": "+7 800 355 35 35",<br>
+             "rentTime": 5,<br>
+             "deliveryDate": "2020-06-06T00:00:00.000Z",<br>
+             "track": 521394,<br>
+             "status": 1,<br>
+             "color": [<br>
+                 "BLACK"<br>
+             ],<br>
+             "comment": "Saske, come back to Kanoha",<br>
+             "cancelled": false,<br>
+             "finished": false,<br>
+             "inDelivery": false,<br>
+             "courierFirstName": "Kaneki"<br>
+             "createdAt": "2020-06-08T14:40:28.219Z",<br>
+             "updatedAt": "2020-06-08T14:40:28.219Z"}<br>   
+     }<br></td>
+    <td>NO APROBADO</td>
+  </tr>
+  <tr>
+    <td>Probar que los datos brindados coinciden con los que se creo el pedido.</td>
+    <td>APROBADO</td>
+  </tr>
+  <!-- Numero 2 -->
+  <tr>
+    <td rowspan="5">Obtener los datos de un pedido con un track inválido.<br>endpoint: GET /api/v1/orders/track</td>
+    <td colspan="3">Recuperar los datos de un pedido por medio de su track.</td>
+    <td rowspan="5"></td>
+  </tr>
+  <tr>
+    <td colspan="3">Introducir un track inexistente de pedido.</td>
+  </tr>
+  <tr>
+    <td>Código respuesta de la API: 404 Not found</td>
+    <td>APROBADO</td>
+    <td rowspan="3"></td>
+  </tr>
+  <tr>
+    <td>Cuerpo de la respuesta:<br>
+     {<br>
+         "message": "Pedido no encontrado"<br>
+     }<br></td>
+    <td>APROBADO</td>
+  </tr>
+  <tr>
+    <td>Probar que la tabla Orders (Pedidos) sigue igual y no hubo ningun cambio.</td>
+    <td>APROBADO</td>
+  </tr>
+  <!-- Numero 2 -->
+  <tr>
+    <td rowspan="5">Obtener los datos de un pedido sin ingresar el track.<br>endpoint: GET /api/v1/orders/track</td>
+    <td colspan="3">Recuperar los datos de un pedido por medio de su track.</td>
+    <td rowspan="5"></td>
+  </tr>
+  <tr>
+    <td colspan="3">No introducir el track en la solicitud.</td>
+  </tr>
+  <tr>
+    <td>Código respuesta de la API: 400 Bad Request</td>
+    <td>APROBADO</td>
+    <td rowspan="3"></td>
+  </tr>
+  <tr>
+    <td>Cuerpo de la respuesta:<br>
+     {<br>
+         "message": "No hay suficientes datos para la búsqueda"<br>
+     }<br></td>
+    <td>APROBADO</td>
+  </tr>
+  <tr>
+    <td>Probar que la tabla Orders (Pedidos) sigue igual y no hubo ningun cambio.</td>
+    <td>APROBADO</td>
+  </tr>   
 </table>

@@ -1,4 +1,4 @@
-# Tabla lista de comprobación y resultados de las pruebas: Función y diseño de la pantalla "Estado del pedido"
+# Tabla lista de comprobación y resultados de las pruebas de la lógica y diseño de la pantalla "Estado del pedido" de la aplicación web
 
 <table>
   <tr>

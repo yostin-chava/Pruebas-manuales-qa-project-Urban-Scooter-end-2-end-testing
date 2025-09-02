@@ -1,4 +1,4 @@
-# Tabla lista de comprobación y resultados de las pruebas: 
+# Tabla lista de comprobación y resultados de las pruebas: Función y diseño de la pantalla "Estado del pedido"
 
 <table>
   <tr>

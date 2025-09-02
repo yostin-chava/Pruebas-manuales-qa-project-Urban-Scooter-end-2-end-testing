@@ -1,4 +1,4 @@
-# Tabla lista de comprobación y resultados de las pruebas: prueba de las ventanas "Método de pago" y "Agregar tarjeta"
+# Tabla de lista de comprobación y resultados de las pruebas para la validación de diferentes endpoints de la API.
 
 <table>
   <tr>

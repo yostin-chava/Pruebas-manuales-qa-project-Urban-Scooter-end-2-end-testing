@@ -20,7 +20,7 @@ Durante el proceso se identificaron y documentaron **errores (bugs)**, así como
 4. **Casos de prueba** para verificar:  
    - Notificación de **“Sin acceso a internet”**.  
    - Notificación que se envía cuando faltan **dos horas** para finalizar el tiempo máximo de entrega del scooter.  
-5. **Pruebas de API y base de datos** en los siguientes endpoints:  
+5. **Listas de comprobación para las pruebas de API y base de datos** de los siguientes endpoints:  
    - Crear repartidor/a → validación con **clases de equivalencia** y **valores límite**.  
    - Iniciar sesión con repartidor/a.  
    - Eliminar repartidor/a.  

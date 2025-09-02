@@ -1,4 +1,4 @@
-# Clases de equivalencia y los valores límite para los campos de entrada del formulario "Hacer pedido"
+# Clases de equivalencia y los valores límite para los campos de entrada del formulario "Hacer pedido" de la aplicación web
 
 <table>
   <tr>

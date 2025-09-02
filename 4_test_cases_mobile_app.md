@@ -1,4 +1,4 @@
-# Tabla casos de prueba y pruebas: la lógica de las funciones de reserva
+# Tabla de casos de prueba y validaciones de lógica y diseño de las notificaciones: sin acceso a internet y cuando faltan 2 horas para la entrega del pedido en la aplicación móvil.
 
 <div style="overflow-x:auto;">
   <table>
